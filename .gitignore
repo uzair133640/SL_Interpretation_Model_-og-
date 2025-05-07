@@ -1,0 +1,36 @@
+# Virtual environment
+tf_env/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Dataset (if large/auto-generated)
+dataset/train/
+dataset/test/
+*.jpg
+*.png
+
+# Trained models and logs
+asl_model.h5
+logs/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables/secrets
+.env
+*.env
+
+# System files (macOS/Windows)
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks
+.ipynb_checkpoints/
