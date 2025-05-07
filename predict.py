@@ -8,8 +8,8 @@ from keras.models import load_model
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # 0 = all messages, 2 = only errors
 
 # Configuration
-MODEL_PATH = '/content/SL_Interpretation_Model/best_model.h5'
-TEST_DATA_DIR = '/content/SL_Interpretation_Model/dataset/test'
+MODEL_PATH = '/content/SL_Interpretation_Model_-og-/best_model.h5'
+TEST_DATA_DIR = '/content/SL_Interpretation_Model_-og-/dataset/test'
 CLASS_ORDER = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
                'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
                ]  # Manual ordering

@@ -23,7 +23,7 @@
 # )
 
 # train_data = train_datagen.flow_from_directory(
-#     '/content/SL_Interpretation_Model/dataset/train',
+#     '/content/SL_Interpretation_Model_-og-/dataset/train',
 #     target_size=IMG_SIZE,
 #     batch_size=BATCH_SIZE,
 #     class_mode='categorical',
@@ -31,7 +31,7 @@
 # )
 
 # val_data = train_datagen.flow_from_directory(
-#     '/content/SL_Interpretation_Model/dataset/train',
+#     '/content/SL_Interpretation_Model_-og-/dataset/train',
 #     target_size=IMG_SIZE,
 #     batch_size=BATCH_SIZE,
 #     class_mode='categorical',
@@ -41,7 +41,7 @@
 # # Load test data
 # test_datagen = ImageDataGenerator(rescale=1./255)
 # test_data = test_datagen.flow_from_directory(
-#     '/content/SL_Interpretation_Model/dataset/test',
+#     '/content/SL_Interpretation_Model_-og-/dataset/test',
 #     target_size=IMG_SIZE,
 #     batch_size=BATCH_SIZE,
 #     class_mode='categorical',
@@ -102,7 +102,7 @@ NUM_EPOCHS = 20
 # Data Validation
 # ----------------------
 def validate_dataset_structure():
-    base_path = '/content/SL_Interpretation_Model/dataset'
+    base_path = '/content/SL_Interpretation_Model_-og-/dataset'
     required_folders = ['train', 'test']
     
     for folder in required_folders:
@@ -135,7 +135,7 @@ def create_data_generators():
     validate_dataset_structure()
     
     # Check for corrupt images
-    train_path = '/content/SL_Interpretation_Model/dataset/train'
+    train_path = '/content/SL_Interpretation_Model_-og-/dataset/train'
     corrupt_train = check_image_integrity(train_path)
     if corrupt_train:
         raise ValueError(f"Found {len(corrupt_train)} corrupt images in training set")
@@ -153,7 +153,7 @@ def create_data_generators():
 
     # Training data
     train_data = train_datagen.flow_from_directory(
-        '/content/SL_Interpretation_Model/dataset/train',
+        '/content/SL_Interpretation_Model_-og-/dataset/train',
         target_size=IMG_SIZE,
         batch_size=BATCH_SIZE,
         class_mode='categorical',
@@ -163,7 +163,7 @@ def create_data_generators():
 
     # Validation data
     val_data = train_datagen.flow_from_directory(
-        '/content/SL_Interpretation_Model/dataset/train',
+        '/content/SL_Interpretation_Model_-og-/dataset/train',
         target_size=IMG_SIZE,
         batch_size=BATCH_SIZE,
         class_mode='categorical',
@@ -174,7 +174,7 @@ def create_data_generators():
     # Test data
     test_datagen = tf.keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
     test_data = test_datagen.flow_from_directory(
-        '/content/SL_Interpretation_Model/dataset/test',
+        '/content/SL_Interpretation_Model_-og-/dataset/test',
         target_size=IMG_SIZE,
         batch_size=BATCH_SIZE,
         class_mode='categorical',
